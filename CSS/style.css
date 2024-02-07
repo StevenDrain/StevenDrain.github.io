@@ -1,0 +1,20 @@
+img {
+    width: 350px;
+    height: auto;
+}
+body{
+    background-color: #F7F6F6;
+}
+.navbar.navbar-expand-lg.bg-body-tertiary {
+    background-color:#3B4453 !important;
+}
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #F7F6F6 !important;
+}
+.dropdown-menu {
+    background-color: #9AA6A9 !important;
+}
+.dropdown-toggle {
+    background-color: #9AA6A9 !important;
+}

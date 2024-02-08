@@ -2,22 +2,50 @@ img {
     width: 350px;
     height: auto;
 }
-body{
-    background-color: #F7F6F6;
-}
+
+
+
 .navbar.navbar-expand-lg.bg-body-tertiary {
-    background-color:#3B4453 !important;
+    background-color: #8E9AAF !important;
 }
-.navbar .navbar-brand,
-.navbar .nav-link {
-    color: #F7F6F6 !important;
+
+.dropdown-menu .dropdown-item {
+    color: black;
 }
+
 .dropdown-menu {
-    background-color: #9AA6A9 !important;
+    background-color: #CBC0D3;
 }
+
 .dropdown-toggle {
-    background-color: #9AA6A9 !important;
+    background-color: #CBC0D3 !important;
 }
-.Header{
-    background-color: #86868B;
+
+.Header {
+    background-color: #DEE2FF;
 }
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+}
+
+.col_Background {
+    background-color: #EFD3D7;
+    border-radius: 10px;
+}
+
+
+

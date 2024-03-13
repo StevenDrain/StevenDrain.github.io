@@ -6,7 +6,7 @@ img {
 
 
 .navbar.navbar-expand-lg.bg-body-tertiary {
-    background-color: #8E9AAF !important;
+    background-color: #f9dbff !important;
 }
 
 .dropdown-menu .dropdown-item {
@@ -14,16 +14,14 @@ img {
 }
 
 .dropdown-menu {
-    background-color: #CBC0D3;
+    background-color: #f9dbff;
 }
 
 .dropdown-toggle {
-    background-color: #CBC0D3 !important;
+    background-color: #f9dbff !important;
 }
 
-.Header {
-    background-color: #DEE2FF;
-}
+
 
 p {
     font-family: Arial, Helvetica, sans-serif;
@@ -43,9 +41,28 @@ h2 {
 }
 
 .col_Background {
-    background-color: #EFD3D7;
+    background-color: #f9dbff;
     border-radius: 10px;
 }
 
+#centerAndShrink {
+    display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+width: 80%; 
+height: 80%; 
+background-color: rgba(255, 255, 255, .7);
+margin: auto;
+border-radius: 10px;;
+}
+body{
+    background-image: url("../Images/Backgroundimg.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
+}
 

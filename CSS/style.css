@@ -25,39 +25,43 @@ img {
 
 p {
     font-family: Arial, Helvetica, sans-serif;
-    
+
 }
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
-    
+
 }
 
 h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    
+
 }
 
 .col_Background {
     background-color: #f9dbff;
+
     border-radius: 10px;
+
 }
 
 #centerAndShrink {
     display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-text-align: center;
-width: 80%; 
-height: 80%; 
-background-color: rgba(255, 255, 255, .7);
-margin: auto;
-border-radius: 10px;;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, .7);
+    margin: auto;
+    border-radius: 10px;
+    ;
 }
-body{
+
+body {
     background-image: url("../Images/Backgroundimg.png");
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -65,4 +69,3 @@ body{
     background-size: cover;
 
 }
-

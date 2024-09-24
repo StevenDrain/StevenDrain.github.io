@@ -31,6 +31,31 @@
 
 
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('img').forEach(img => {
+                img.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    if (document.body.classList.contains('darken')) {
+                        document.body.classList.remove('darken');
+                        img.classList.remove('hovered');
+                    } else {
+                        document.body.classList.add('darken');
+                        img.classList.add('hovered');
+                    }
+                });
+            });
+
+            document.addEventListener('click', () => {
+                if (document.body.classList.contains('darken')) {
+                    document.body.classList.remove('darken');
+                    document.querySelectorAll('img.hovered').forEach(img => {
+                        img.classList.remove('hovered');
+                    });
+                }
+            });
+        });
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <title>Steven Drain's Portfolio</title>
@@ -105,7 +130,7 @@
                         modeling,
                         and Game Design. I have learned how to use <b>Photoshop, Premire, Blender, Unity, Visual Studio
                             Code,
-                            Github</b>. Below are a few examples of my work.
+                            Github</b>. Below are a few examples of my work. <b>Click on the images to expand for a better view</b>, I hope you enjoy!
                     </p>
                 </div>
             </div>
@@ -144,6 +169,25 @@
                             with a project that genuinely interested me. I was able to work with data that my
                             friends and I had
                             collected over a year.
+                        </p>
+                    </div>
+                </div>
+                <div class="row  m-0 p-0">
+                    <div class="col-md-6">
+                        <h2>Recipie and Video Game Filter Table Website</h2>
+                        <img rel="preload" src="Images/VgrecipiesUI.png" loading="lazy" class="img-fluid" alt="Website CSS design">
+                        <img rel="preload" src="Images/VgrecipiesUI2.png" loading="lazy" class="img-fluid" alt="Main Page">
+                        <img rel="preload" src="Images/VgrecipiesCode.png" loading="lazy" class="img-fluid" alt="Code">
+                    </div>
+                    <div class="col-md-6 col_Background">
+                        <p>
+                            This project was created for my web design class. It displays data that anyone can add to a fliter table, 
+                            using <b>JavaScript, HTML, SQL, and More</b>. The website has a total of 4 pages, the index page, the add page, the edit page, and delete page,
+                            thet all work together in order to edit the main table on the main page. this table has over 500 lines of data that can be filtered by the user by Name,
+                            Genre, if it the data is a recipe or a video game, the rating and the ammount of results shown. I am proud of this project because it was the first time I worked with SQL and
+                            made something of this scale, this project took a lot of time and relearning in order to make this project work. I am particularly proud of the CSS work and the JavaScript, as 
+                            I had to make systems I've never worked with before and made a CSS file that I am extremely 
+                            happy with I love the retro feel of windows 95 and used it heavily as inspiration. This project was a culmination of all the skills I learned in the class and <b>countless of hours</b> of work that I am proud of.
                         </p>
                     </div>
                 </div>

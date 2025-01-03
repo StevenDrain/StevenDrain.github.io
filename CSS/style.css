@@ -31,7 +31,7 @@ body.darken::before {
 }
 
 .navbar.navbar-expand-lg.bg-body-tertiary {
-    background-color: #f9dbff !important;
+    background-color: #495057af !important;
 }
 
 .dropdown-menu .dropdown-item {
@@ -39,11 +39,11 @@ body.darken::before {
 }
 
 .dropdown-menu {
-    background-color: #f9dbff;
+    background-color: #495057af;
 }
 
 .dropdown-toggle {
-    background-color: #f9dbff !important;
+    background-color: #495057af !important;
 }
 
 p {
@@ -61,7 +61,7 @@ h2 {
 }
 
 .col_Background {
-    background-color: #f9dbff;
+    background-color: #495057af;
     border-radius: 10px;
 }
 

@@ -2,73 +2,52 @@
 <html>
 
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steven Drain's Portfolio</title>
 
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css' />
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
-        defer></script>
 
+    <!-- Preload Custom CSS -->
     <link rel="preload" href="CSS/style.css" as="style" onload="this.rel='stylesheet'">
 
-
-
-    <meta name='viewport' content='width=device-width, initial-scale=1' />
-
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5ZX1T3E9T"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-Q5ZX1T3E9T');
-
-
-
     </script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
+        defer></script>
+
+    <!-- Image Expand Code -->
+    <script src="JS/script.js" defer></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('img').forEach(img => {
-                img.addEventListener('click', (event) => {
-                    event.stopPropagation();
-                    if (document.body.classList.contains('darken')) {
-                        document.body.classList.remove('darken');
-                        img.classList.remove('hovered');
-                    } else {
-                        document.body.classList.add('darken');
-                        img.classList.add('hovered');
-                    }
-                });
-            });
-
-            document.addEventListener('click', () => {
-                if (document.body.classList.contains('darken')) {
-                    document.body.classList.remove('darken');
-                    document.querySelectorAll('img.hovered').forEach(img => {
-                        img.classList.remove('hovered');
-                    });
-                }
-            });
-        });
+        
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <title>Steven Drain's Portfolio</title>
 </head>
 
 <body class="container-narrow" style="margin: 0; padding: 0;">
-    <link rel="preload" as="image" href="Images/Headshot.jpg">
-
-
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top"id="Pixelify">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" >
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Steven Drain's Portfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -88,8 +67,8 @@
                                         style="color: #000000;"></i></a></li>
                             <li><a class="dropdown-item" href="#UnityLink">Unity Artifacts <i class="fa-solid fa-cube"
                                         style="color: #000000;"></i></a></li>
-                             <li><a class="dropdown-item" href="#LDLink">Level Design Artifacts <i
-                                        class="fa-solid fa-cubes"" style="color: #000000;"></i></a>
+                            <li><a class="dropdown-item" href="#LDLink">Level Design Artifacts <i
+                                        class="fa-solid fa-cubes"" style=" color: #000000;"></i></a>
                             </li>
                             <li><a class="dropdown-item" href="#GDLink">Graphic Design Artifacts / 3D Modeling <i
                                         class="fa-solid fa-pen-nib" style="color: #000000;"></i></a>
@@ -102,6 +81,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="https://www.linkedin.com/in/stevenjmdrain/">LinkedIn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://github.com/StevenDrain">Github</a>
                     </li>
                 </ul>
             </div>
@@ -119,46 +101,41 @@
             <div class="row">
                 <div class="col-md-5 offset-md-1 col_Background2">
                     <h1>Steven Drain's Portfolio</h1>
-                    <img src="Images/Headshot.jpg" alt="Self Image" class="img-fluid">
+                    <img src="Images/Self_IMG.png" alt="Self Image" class="img-fluid">
                 </div>
-                <div class="col-md-6 mt-5 col_Background2">
-                    <p>Hello I am Steven Drain, I am a second year Games, Interactive Media and Mobile (GIMM) student at
-                        <b><a href="https://www.boisestate.edu/">Boise State University</a></b>. I am from Eagle Idaho
-                        who
-                        wants to
-                        explore jobs in both programming games and 3D
-                        modeling. I learned how to program in middle school with HTML, CSS, and JavaScript, I learned
-                        Unity
-                        3D
-                        and C# in Junior Year of High School creating a 3D shooter game which skyrocketed my interest in
-                        the
-                        games industry. I joined GIMM and continued my education in programming, graphic design, 3D
-                        modeling,
-                        and Game Design. I have learned how to use <b>Photoshop, Premire, Blender, Unity, Visual Studio
-                            Code,
-                            Github</b>. Below are a few examples of my work. <b>Click on the images to expand for a better view</b>, I hope you enjoy!
+                <div class="col-md-6 mt-5 col_Background2 d-flex flex-column justify-content-center align-items-center">
+                    <p>Hello I am Steven Drain, I am a third year Games, Interactive Media and Mobile (GIMM) student at
+                    <b><a href="https://www.boisestate.edu/">Boise State University</a></b>. I am from Eagle Idaho
+                    who wants to explore jobs in both programming games and 3D
+                    modeling. I learned how to program in middle school with HTML, CSS, and JavaScript, I learned Unity 3D
+                    and C# in Junior Year of High School creating a 3D shooter game which skyrocketed my interest in the
+                    games industry. I joined GIMM and continued my education in programming, graphic design, 3D modeling,
+                    and Game Design. I have learned how to use <b>Photoshop, Premire, Blender, Unity, Visual Studio Code,
+                    and Github</b>. I hope to continue to design games and make expereinces that inspired me to make 
+                    unique expereinces. I am currently looking for internships and jobs in the games industry and am excited to see where my career takes me.
+                    Below are a few examples of my work. <b>Make sure to click on the images to expand for a
+                    better view</b>, I hope you enjoy!
                     </p>
                 </div>
             </div>
 
             <div>
-                <div class="Header windowBar row m-0 p-0" >
-                    
+                <div class="Header windowBar row m-0 p-0">
 
-                    <h1 id="HTMLink" class = "">HTML Portfolio Artifacts</h1>
+                    <!-- HTML Portfolio Artifacts -->
+                    <h1 id="HTMLink" class="">HTML Portfolio Artifacts</h1>
 
-                    
+
                 </div>
 
                 <div class="row  m-0 p-0">
                     <div class="col-md-6 col_Background">
                         <h2>Bowling Data Website</h2>
-                        <img rel="preload" src="Images/Bowling1.png" loading="lazy" class="img-fluid"
+                        <img rel="preload" src="Images/Bowling1.png" loading="lazy" class="img-fluid ImageScale"
                             alt="Bowling D3 graphs">
-                        <img rel="preload" src="Images/Bowling2.png" loading="lazy" class="img-fluid" alt="Main Page">
-                        <img rel="preload" src="Images/BowlingCode1.png" loading="lazy" class="img-fluid" alt="Code">
+                        <img rel="preload" src="Images/Bowling2.png" loading="lazy" class="img-fluid ImageScale" alt="Main Page">
                     </div>
-                    <div class="col-md-6 ">
+                    <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
                         <p>
                             This project was created for my web design class. It displays data from a bowling
                             group that my friends
@@ -175,49 +152,56 @@
                             with a project that genuinely interested me. I was able to work with data that my
                             friends and I had
                             collected over a year.
+                            if you want to see the code for this project you can 
+                            visit this link <a href="https://github.com/StevenDrain/Mobile-Data-Website">Mobile Data Website</a>
                         </p>
                     </div>
                 </div>
                 <div class="row  m-0 p-0">
                     <div class="col-md-6">
                         <h2>Recipie and Video Game Filter Table Website</h2>
-                        <img rel="preload" src="Images/VgrecipiesUI.png" loading="lazy" class="img-fluid" alt="Website CSS design">
-                        <img rel="preload" src="Images/VgrecipiesUI2.png" loading="lazy" class="img-fluid" alt="Main Page">
-                        <img rel="preload" src="Images/VgrecipiesCode.png" loading="lazy" class="img-fluid" alt="Code">
+                        <img rel="preload" src="Images/VgrecipiesUI.png" loading="lazy" class="img-fluid ImageScale"
+                            alt="Website CSS design">
+                        <img rel="preload" src="Images/VgrecipiesUI2.png" loading="lazy" class="img-fluid ImageScale"
+                            alt="Main Page">
                     </div>
-                    <div class="col-md-6 col_Background">
+                    <div class="col-md-6 col_Background d-flex flex-column justify-content-center align-items-center">
                         <p>
-                            This project was created for my web design class. It displays data that anyone can add to a fliter table, 
-                            using <b>JavaScript, HTML, SQL, and More</b>. The website has a total of 4 pages, the index page, the add page, the edit page, and delete page,
-                            thet all work together in order to edit the main table on the main page. this table has over 500 lines of data that can be filtered by the user by Name,
-                            Genre, if it the data is a recipe or a video game, the rating and the ammount of results shown. I am proud of this project because it was the first time I worked with SQL and
-                            made something of this scale, this project took a lot of time and relearning in order to make this project work. I am particularly proud of the CSS work and the JavaScript, as 
-                            I had to make systems I've never worked with before and made a CSS file that I am extremely 
-                            happy with I love the retro feel of windows 95 and used it heavily as inspiration. This project was a culmination of all the skills I learned in the class and <b>countless of hours</b> of work that I am proud of.
+                            This project was created for my web design class. It displays data that anyone can add to a
+                            fliter table,
+                            using <b>JavaScript, HTML, SQL, and More</b>. The website has a total of 4 pages, the index
+                            page, the add page, the edit page, and delete page,
+                            thet all work together in order to edit the main table on the main page. this table has over
+                            500 lines of data that can be filtered by the user by Name,
+                            Genre, if it the data is a recipe or a video game, the rating and the ammount of results
+                            shown. I am proud of this project because it was the first time I worked with SQL and
+                            made something of this scale, this project took a lot of time and relearning in order to
+                            make this project work. I am particularly proud of the CSS work and the JavaScript, as
+                            I had to make systems I've never worked with before and made a CSS file that I am extremely
+                            happy with I love the retro feel of windows 95 and used it heavily as inspiration. This
+                            project was a culmination of all the skills I learned in the class and <b>countless of
+                            hours</b> of work that I am proud of. if you want to see the code for this project you can 
+                            visit this link <a href="https://github.com/StevenDrain/Filter-Table-Website">Mobile Data Website</a>
                         </p>
                     </div>
                 </div>
             </div>
             <div class="container-fluid">
                 <div class="Header windowBar row m-0 p-0">
-                    
+
 
                     <h1 id="UnityLink">Unity Portfolio Artifacts</h1>
 
-                    
+
                 </div>
 
                 <div class="row  m-0 p-0">
                     <div class="col-md-6 col_Background">
                         <h2>Project Olympus</h2>
-                        <img rel="preload" src="Images/UnityIMG_PO.png" loading="lazy" class="img-fluid"
-                            alt="Project Olympus">
-                        <img rel="preload" src="Images/UnityIMG_PO2.png" loading="lazy" class="img-fluid"
-                            alt="Project Olympus">
-                        <img rel="preload" src="Images/UnityIMG_PO3.jpeg" loading="lazy" class="img-fluid"
+                        <img rel="preload" src="Images/UnityIMG_PO.png" loading="lazy" class="img-fluid ImageScale"
                             alt="Project Olympus">
                     </div>
-                    <div class="col-md-6 mt-5">
+                    <div class="col-md-6 mt-5 d-flex flex-column justify-content-center align-items-center">
                         <p>
                             This was the first Game I ever made in High School, it helped me learn what I wanted
                             to do in life,
@@ -254,21 +238,18 @@
                                 allowfullscreen></iframe>
                         </div>
                     </div>
-                    <div class="col-md-6 mt-5 col_Background">
+                    <div class="col-md-6 mt-5 col_Background d-flex flex-column justify-content-center align-items-center">
                         <p>
                             This project was the first VR Game I worked on, this was a group project that I
-                            collaborated with four
-                            other people on. This project was to teach someone how to use gym equipment and help
-                            the user get
-                            acclimated in the gym space. We worked on the idea for a semester and got used to
-                            using the equipment:
-                            <b>Unity for VR, Occulus Quest 2 and 3, and 360 cameras</b>. I worked mostly on the
-                            <b>script for the
-                                videos we
-                                took, scheduling times for filming, coming up with the initial idea, filming the
-                                360 videos, 360
-                                Video
-                                editing in Premire Pro, and minor Unity programming.</b>
+                            collaborated with four other people on. This project was to teach someone how to use gym equipment and help
+                            the user get acclimated in the gym space. We initially did not want to do a gym equipment tutorial,
+                            but a campus tour where the user would be able to click on the buildings on our campus and would be able to see important
+                            locations and information about the buildings. We had to pivot pretty deep into our idea phase, due to many different problems
+                            We worked on the idea for a semester and got used to using the equipment: <b>Unity for VR, Occulus Quest 2 and 3, and 360 
+                            cameras</b>. I worked mostly on the <b>script for the videos we took, scheduling times for filming, coming up with the initial idea, filming the
+                             360 videos, 360 Video editing in Premire Pro, and minor Unity programming.</b> I learned a lot about video editing
+                             and the complexities of working with a team on a project.
+
                         </p>
                     </div>
 
@@ -277,20 +258,21 @@
                             <h2>Saddle Bums Last Stand</h2>
                             <div>
                                 <img rel="preload" src="Images/SaddleBumsLastStand1.png" loading="lazy"
-                                    class="img-fluid" alt="Saddle Bums Last Stand">
-                                <img rel="preload" src="Images/SaddleBumsLastStand2.png" loading="lazy"
-                                    class="img-fluid" alt="Saddle Bums Last Stand">
+                                    class="img-fluid ImageScale" alt="Saddle Bums Last Stand">
+                                
                             </div>
                         </div>
-                        <div class="col-md-6 mt-5">
+                        <div class="col-md-6 mt-5 d-flex flex-column justify-content-center align-items-center">
                             <p>
                                 This was the first Game Jam I ever participated in and won, I did everything
                                 myself, the modeling, the scripting, and game design,
                                 This is an endless shooter that is set in a western enviroment, the object of
                                 the game is to shoot as many enemies as possible
                                 before they touch you. I had 10 days to make this game and I am proud of what I
-                                made. The link to download is here
-                                <b><a href="https://stevendrain.itch.io/saddle-bums-last-stand">Saddle Bums Last
+                                made, while the idea is really simple and there are a lot of bugs that make it tough 
+                                to play for a long time and very basic and rudementary ways to do the power-up which I have 
+                                now learned much easier and simpler ways of making. if you want to check it out <b>the link to download is here:
+                                <a href="https://stevendrain.itch.io/saddle-bums-last-stand">Saddle Bums Last
                                         Stand Itch.io Page</a></b>
                             </p>
                         </div>
@@ -302,7 +284,7 @@
                         <div class="col-md-6 ">
                             <h2>Interactive Comic</h2>
                             <div>
-                                <img rel="preload" src="Images/IComic1.png" loading="lazy" class="img-fluid"
+                                <img rel="preload" src="Images/IComic1.png" loading="lazy" class="img-fluid ImageScale"
                                     alt="Saddle Bums Last Stand">
 
                                 <br>
@@ -315,7 +297,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 mt-5 col_Background">
+                        <div class="col-md-6 mt-5 col_Background d-flex flex-column justify-content-center align-items-center">
                             <p>
                                 This was one of the <b>first collabroative game projects I worked on in GIMM</b>, I
                                 worked with four others in creating this interactive comic,
@@ -337,31 +319,46 @@
                 </div>
                 <div class="container-fluid">
                     <div class="Header windowBar row">
-                        
+
                         <h1 id="LDLink">Level Design Artifacts</h1>
                     </div>
                     <div class="row">
                         <p>
-                            While I enjoy programming and 3D modeling, I also enjoy level design the most out of everything. I have worked on a few games and understanding
-                            how to design interesting and unique levels that keep the player engaged is something I am extremely interested in. Below are a few sketches of levels I have
-                            created on my own or with a group in order to optimize the experience and introduce new mechanics to the player. I will go more in depth on each of these levels and what I learned from them below.
+                            While I enjoy programming and 3D modeling, I also enjoy level design the most out of
+                            everything. I have worked on a few games and understanding
+                            how to design interesting and unique levels that keep the player engaged is something I am
+                            extremely interested in. Below are a few sketches of levels I have
+                            created on my own or with a group in order to optimize the experience and introduce new
+                            mechanics to the player. I will go more in depth on each of these levels and what I learned
+                            from them below.
                         </p>
                     </div>
                     <div class="row">
                         <div class="col-md-6 col_Background">
                             <h2>Mineshaft Multiplayer Level</h2>
-                            <img rel="preload" src="Images/MineshaftLevelConcept.jpg" loading="lazy" class="img-fluid"
+                            <img rel="preload" src="Images/MineshaftLevelConcept.jpg" loading="lazy" class="img-fluid ImageScale"
                                 alt="Mineshaft Level Concept">
-                            <img rel="preload" src="Images/MineshaftLevelConcept2.png" loading="lazy" class="img-fluid"
+                            <img rel="preload" src="Images/MineshaftLevelConcept2.png" loading="lazy" class="img-fluid ImageScale"
                                 alt="Mineshaft Level Concept">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
                             <p>
-                                This is a game I worked on with three other students in my game design class. We worked on laying this level out for almost an hour making minor tweaks and changes.
-                                The game is a couch co-op 3D platformer where two players work together in order to escape from the center of the earth. The mineshaft level shown is <b>really dark and hard to see the obstacles.</b> Each level the players get a new power and in this one the players have a flashlight type power (player 1)
-                                and rock break gauntlets (player 2). Each player's movement options are also slightly different: one player moves slower and doesn't jump as high (player 1), while the other player moves faster and jumps higher (player 2).
-                                The players have to split up in order to get through the level. First, player 2 has to jump to an area only they can get to in order to do some platforming and let player 1 access the next floor.<b> Player 1 has to shine its light up</b>
-                                in order to light the environment for player 2 to see and break the obstacles in this dark level. Once they both are on the same level, player 1 has to stay close to player 2 in order to light the way to the exit. This level was a lot of fun to make and I learned a lot about how to make a level, 
+                                This is a game I worked on with three other students in my game design class. We worked
+                                on laying this level out for almost an hour making minor tweaks and changes.
+                                The game is a couch co-op 3D platformer where two players work together in order to
+                                escape from the center of the earth. The mineshaft level shown is <b>really dark and
+                                    hard to see the obstacles.</b> Each level the players get a new power and in this
+                                one the players have a flashlight type power (player 1)
+                                and rock break gauntlets (player 2). Each player's movement options are also slightly
+                                different: one player moves slower and doesn't jump as high (player 1), while the other
+                                player moves faster and jumps higher (player 2).
+                                The players have to split up in order to get through the level. First, player 2 has to
+                                jump to an area only they can get to in order to do some platforming and let player 1
+                                access the next floor.<b> Player 1 has to shine its light up</b>
+                                in order to light the environment for player 2 to see and break the obstacles in this
+                                dark level. Once they both are on the same level, player 1 has to stay close to player 2
+                                in order to light the way to the exit. This level was a lot of fun to make and I learned
+                                a lot about how to make a level,
                                 and how to split up characters naturally to make them have to interact in new ways.
                             </p>
                         </div>
@@ -369,29 +366,35 @@
                     <div class="row">
                         <div class="col-md-6">
                             <h2>Molten Multiplayer Level</h2>
-                            <img rel="preload" src="Images/MoltenLevelConcept.jpg" loading="lazy" class="img-fluid"
+                            <img rel="preload" src="Images/MoltenLevelConcept.jpg" loading="lazy" class="img-fluid ImageScale"
                                 alt="Molten Level Concept">
                         </div>
-                        <div class="col-md-6 col_Background">
+                        <div class="col-md-6 col_Background d-flex flex-column justify-content-center align-items-center">
                             <p>
-                                This is the Molten level for the same <b>couch co-op game for the mineshaft</b>. We worked on a few different levels, and in this level, the players have a lava sheild and a push rock ability in order to help eachother complete the level. the player with the lava sheild can <b>cross the lava and protect the other player</b> 
-                                while they push rocks. The player with the push rock ability can push rocks in order to<b> make platforms for the players to jump on</b>. Like the level above it was a lot of fun brainstorming ideas to make this level interesting.
+                                This is the Molten level for the same <b>couch co-op game for the mineshaft</b>. We
+                                worked on a few different levels, and in this level, the players have a lava sheild and
+                                a push rock ability in order to help eachother complete the level. the player with the
+                                lava sheild can <b>cross the lava and protect the other player</b>
+                                while they push rocks. The player with the push rock ability can push rocks in order
+                                to<b> make platforms for the players to jump on</b>. Like the level above it was a lot
+                                of fun brainstorming ideas to make this level interesting.
                             </p>
                         </div>
                     </div>
                     <div class="row">
-                        <h1>More to come soon</h1>
+                        <h1>More levels to come soon</h1>
                     </div>
                 </div>
                 <div class="container-fluid">
                     <div class="Header windowBar row">
-                        
+
                         <h1 id="GDLink">Graphic Design / 3D Modeling Portfolio Artifacts</h1>
-                        
+
                     </div>
                     <div class="row">
                         <p>
-                            These are some 3D models that I made using <b>Blender and Maya </b>, I made these to promote my game
+                            These are some 3D models that I made using <b>Blender and Maya </b>, I made these to promote
+                            my game
                             Project Olympus and improve in those softwares, I
                             learned How to use Blender in High School and have worked with it ever since. I have
                             since worked on a few
@@ -407,25 +410,29 @@
                     <div class="row">
                         <div class="col-md-12 col_Background">
                             <h2>Project Olympus</h2>
-                            <img rel="preload" src="Images/3DModel1.png" loading="lazy" class="img-fluid"
+                            <img rel="preload" src="Images/3DModel1.png" loading="lazy" class="img-fluid ImageScale"
                                 alt="Project Olympus">
-                            <img rel="preload" src="Images/3DModel2.png" loading="lazy" class="img-fluid"
+                            <img rel="preload" src="Images/3DModel2.png" loading="lazy" class="img-fluid ImageScale"
                                 alt="Project Olympus">
-                            <img rel="preload" src="Images/3DModel3.png" loading="lazy" class="img-fluid"
+                            <img rel="preload" src="Images/3DModel3.png" loading="lazy" class="img-fluid ImageScale"
                                 alt="Project Olympus">
                         </div>
                         <div class="col-md-12">
                             <h2>Hand Model</h2>
-                            <img rel="preload" src="Images/3DModel4.png" class="img-fluid" alt="Norse Knife">
+                            <img rel="preload" src="Images/3DModel4.png" class="img-fluid ImageScale" alt="Norse Knife">
                         </div>
                         <div class="col-md-12 col_Background">
                             <h2>Knife Model</h2>
-                            <img rel="preload" src="Images/NorseKnifeRender.jpg" class="img-fluid" alt="Norse Knife">
-                            <p> This is a knife model I worked on in my animation and 3D modeling class. In order to make this, 
-                                I had to learn <b>Maya, RoadKill, and Substance Painter 3D</b>. I really enjoyed making this model and
-                                 painting it in Substance Painter. I feel like it worked out really well in the end, although I 
-                                 would like to make the knife blade sharper than it is in the future and work on the stitching for 
-                                 the handle.</p>
+                            <img rel="preload" src="Images/NorseKnifeRender.jpg" class="img-fluid ImageScale" alt="Norse Knife">
+                            <p> This is a knife model I worked on in my animation and 3D modeling class. In order to
+                                make this,
+                                I had to learn <b>Maya, RoadKill, and Substance Painter 3D</b>. I really enjoyed making
+                                this model and
+                                painting it in Substance Painter. I feel like it worked out really well in the end,
+                                although I
+                                would like to make the knife blade sharper than it is in the future and work on the
+                                stitching for
+                                the handle.</p>
                         </div>
                     </div>
                 </div>
@@ -433,13 +440,13 @@
         </div>
     </div>
     <br>
-    <footer id="Pixelify">
+    <footer>
         <div class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                         <ul class="navbar-nav">
-                            <p id="Pixelify"class="navbar-brand">Steven Drain's Portfolio</p>
+                            <p class="navbar-brand">Steven Drain's Portfolio</p>
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page"
                                     href="mailto:stevendrain@u.boisestate.edu">Contact Me</a>
@@ -447,6 +454,9 @@
                             <li class="nav-item">
                                 <a class="nav-link active"
                                     href="https://www.linkedin.com/in/stevenjmdrain/">LinkedIn</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="https://github.com/StevenDrain">Github</a>
                             </li>
                         </ul>
                     </div>

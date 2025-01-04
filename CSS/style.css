@@ -7,7 +7,9 @@
 a {
     color:rgb(0, 2, 121);
 }
-
+p{
+    font-family:'Times New Roman', Times, serif;
+}
 /* General Image Styles */
 .ImageScale {
     transition: transform 0.25s ease-in-out; /* Smooth transition for both hover and unhover states */

@@ -1,101 +1,354 @@
-/* General Image Styles */
+/* =============================================
+   DESIGN SYSTEM
+============================================= */
+:root {
+    /* =============================================
+       BACKGROUNDS (dark → light hierarchy)
+    ============================================= */
+    --bg-main: #590d22ff;        /* page background */
+    --bg-surface: #800f2fff;     /* cards */
+    --bg-elev: #a4133cff;        /* hover / elevated surfaces */
+
+    /* Gradient background */
+    --bg-gradient-start: #590d22ff;
+    --bg-gradient-end: #800f2fff;
+
+    /* =============================================
+       ACCENTS (interaction colors)
+    ============================================= */
+    --accent: #ff4d6dff;         /* primary accent */
+    --accent-hover: #ff758fff;   /* hover state */
+    --accent-soft: #ff8fa3ff;    /* tags / subtle UI */
+
+    /* =============================================
+       TEXT
+    ============================================= */
+    --text-main: #fff0f3ff;      /* primary text */
+    --text-dim: #ffb3c1ff;       /* secondary text */
+
+    /* =============================================
+       UI ELEMENTS
+    ============================================= */
+    --border-subtle: #ffccd5ff;
+
+    /* Navbar */
+    --nav-bg: rgba(89, 13, 34, 0.85);
+
+    /* Shadows */
+    --card-shadow: rgba(0, 0, 0, 0.35);
+    --accent-shadow: rgba(255, 77, 109, 0.25);
+
+    /* Scrollbar */
+    --scroll-thumb: #a4133cff;
+
+    /* Selection */
+    --selection-bg: #ff4d6dff;
+    --selection-text: #000000;
+
+    /* Buttons */
+    --button-text: #000000;
+}
+
+/*--night-bordeaux: #590d22ff;
+--dark-amaranth: #800f2fff;
+--cherry-rose: #a4133cff;
+--rosewood: #c9184aff;
+--bubblegum-pink: #ff4d6dff;
+--bubblegum-pink-2: #ff758fff;
+--cotton-candy: #ff8fa3ff;
+--cherry-blossom: #ffb3c1ff;
+--pastel-pink: #ffccd5ff;
+--lavender-blush: #fff0f3ff; */
+
+/* =============================================
+   RESET
+============================================= */
 * {
-    font-family: Oswald, sans-serif;
-    font-size: 18px;
-    line-height: 2;
-}
-a {
-    color:rgb(0, 2, 121);
-}
-p{
-    font-family:'Times New Roman', Times, serif;
-}
-/* General Image Styles */
-.ImageScale {
-    transition: transform 0.25s ease-in-out; /* Smooth transition for both hover and unhover states */
-    width: 600px;
-    height: auto;
-    border: 1px solid #000000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Image Hover Effect */
-.ImageScale:hover:not(.no-hover) {
-    transform: scale(1.025); /* Scale up on hover */
-}
-
-/* Darken Background Overlay */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    opacity: 0;
-    transition: opacity 0.25s ease;
-    pointer-events: none;
-}
-
-body.darken::before {
-    opacity: 1;
-}
-
-/* Centered and Scaled Image */
-.ImageScale.hovered {
-    position: fixed;
-    z-index: 1000;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1.5);
-    transition: transform 0.25s ease-in-out; /* Ensure smooth transition when clicked */
-}
-
-/* Navbar Styles */
-.navbar.navbar-expand-lg.bg-body-tertiary {
-    background-color: #495057af !important;
-}
-
-/* Dropdown Menu Styles */
-.dropdown-menu .dropdown-item {
-    color: black;
-}
-
-.dropdown-menu, .dropdown-toggle {
-    background-color: #495057af !important;
-}
-
-h1 {
-    font-weight: bolder;
-}
-
-h2 {
-    font-weight: bold;
-}
-
-/* Column Background */
-.col_Background {
-    background-color: #495057af;
-    border-radius: 4px;
-}
-
-/* Center and Shrink Container */
-#centerAndShrink {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    width: 80%;
-    height: 80%;
-    background-color: rgba(255, 255, 255, 0.7);
-    margin: auto;
-    border-radius: 8px;
-}
-
-/* Body Background */
+/* =============================================
+   BASE
+============================================= */
 body {
-    background-image: url("../Images/Backgroundimg.png");
-    background-size: cover;
+    background: linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+}
+
+/* =============================================
+   NAVBAR
+============================================= */
+.menubar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 12px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menubar-brand {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.menubar-links {
+    display: flex;
+    gap: 18px;
+}
+
+.menu-btn {
+    color: var(--text-dim);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.menu-btn:hover {
+    color: var(--accent);
+}
+
+/* =============================================
+   LAYOUT
+============================================= */
+.desktop {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* =============================================
+   ABOUT SECTION
+============================================= */
+.about-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 24px;
+    align-items: center;
+}
+
+@media (max-width: 700px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.photo-frame img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.text-pane {
+    color: var(--text-main);
+}
+
+.text-pane p {
+    font-size: 16px;
+    color: var(--text-dim);
+}
+
+/* =============================================
+   SECTIONS
+============================================= */
+.section-win {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.section-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* =============================================
+   CARD GRID
+============================================= */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+/* =============================================
+   PROJECT CARD
+============================================= */
+.pcard {
+    background: var(--bg-surface);
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border 0.25s ease;
+}
+
+.pcard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px var(--card-shadow);
+    border-color: var(--accent-shadow);
+}
+
+/* =============================================
+   IMAGE / VIDEO
+============================================= */
+.card-img-well,
+.card-vid-well {
+    overflow: hidden;
+}
+
+.card-img-well img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.pcard:hover img {
+    transform: scale(1.05);
+}
+
+.card-vid-well iframe {
+    width: 100%;
+    height: 180px;
+    border: none;
+}
+
+/* =============================================
+   CARD BODY
+============================================= */
+.card-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-body h2 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card-body p {
+    font-size: 14px;
+    color: var(--text-dim);
+}
+
+/* =============================================
+   TAGS
+============================================= */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+
+/* =============================================
+   BUTTONS
+============================================= */
+.card-btn {
+    display: inline-block;
+    margin-top: 8px;
+
+    padding: 8px 14px;
+    border-radius: 8px;
+
+    background: var(--accent);
+    color: var(--button-text);
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.card-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px var(--accent-shadow);
+}
+
+/* =============================================
+   INTRO BOX
+============================================= */
+.intro-box {
+    max-width: 700px;
+}
+
+.intro-box p {
+    font-size: 15px;
+    color: var(--text-dim);
+}
+
+/* =============================================
+   MODEL VIEWER
+============================================= */
+model-viewer {
+    width: 100%;
+    height: 380px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* =============================================
+   FOOTER / TASKBAR (SIMPLIFIED)
+============================================= */
+.taskbar {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 14px;
+}
+
+/* =============================================
+   SCROLLBAR
+============================================= */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb);
+    border-radius: 10px;
+}
+
+/* =============================================
+   SELECTION
+============================================= */
+::selection {
+    background: var(--selection-bg);
+    color: var(--selection-text);
+}
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+@media (max-width: 640px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
 }

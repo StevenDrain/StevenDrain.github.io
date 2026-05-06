@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steven Drain — Game Design Portfolio</title>
-    <link rel="icon" type="image/png" href="/Images/StevenRevisedLogo.png">
+    <link rel="icon" type="image/png" href="Images/StevenRevisedLogo.png">
 
-    <!-- Modern font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-
-    <!-- Model Viewer -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 
     <link rel="stylesheet" href="CSS/style.css">
@@ -20,31 +16,39 @@
 
 <body>
 
-<!-- NAV -->
-<nav class="menubar">
-    <div class="menubar-brand"><img src="Images/StevenRevisedLogo.png" alt="Logo" class="brand-logo"><b>Steven Drain</b></div>
-    <div class="menubar-links">
-        <a class="menu-btn" href="#about">About</a>
-        <a class="menu-btn" href="#work">Work</a>
-        <a class="menu-btn" href="#level">Level Design</a>
-        <a class="menu-btn" href="#art">3D Models</a>
-        <a class="menu-btn" href="mailto:stevendrain@u.boisestate.edu">Contact</a>
+<nav class="navbar navbar-expand-lg sticky-top menubar">
+    <div class="container">
+        <a class="navbar-brand menubar-brand d-flex align-items-center">
+            <img src="Images/StevenRevisedLogo.png" alt="Logo" class="brand-logo me-2">
+            <b>Steven Drain</b>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav ms-auto menubar-links">
+                <a class="nav-link menu-btn" href="#about">About</a>
+                <a class="nav-link menu-btn" href="#work">Work</a>
+                <a class="nav-link menu-btn" href="#level">Level Design</a>
+                <a class="nav-link menu-btn" href="#art">3D Models</a>
+                <a class="nav-link menu-btn btn-contact px-3 ms-lg-3" href="mailto:stevendrain@u.boisestate.edu">Contact</a>
+            </div>
+        </div>
     </div>
 </nav>
 
-<main class="desktop">
+<main class="container my-5">
 
-<!-- ABOUT -->
-<section id="about" class="section-win">
-    <div class="about-grid">
-
-        <div class="photo-frame">
-            <img src="Images/Steven Drain.jpg" alt="Steven Drain">
+<section id="about" class="py-5">
+    <div class="row align-items-center g-4">
+        <div class="col-md-4 col-lg-3 text-center">
+            <div class="photo-frame">
+                <img src="Images/Steven Drain.jpg" alt="Steven Drain" class="img-fluid rounded-4">
+            </div>
         </div>
-
-        <div class="text-pane">
-            <h1>Game Designer & Developer</h1>
-            <p>
+        <div class="col-md-8 col-lg-9 text-pane">
+            <h1 class="display-5 fw-bold">Game Designer & Developer</h1>
+            <p class="lead">
                 I’m Steven Drain, a Games, Interactive Media, and Mobile Technology (GIMM) Graduate focused on gameplay systems,
                 level design, and 3D asset creation. I specialize in Unity (C#),
                 interactive systems, and player-driven experiences.
@@ -54,228 +58,91 @@
                 and I’m currently seeking full time positions in game development.
             </p>
         </div>
-
     </div>
 </section>
 
-<!-- WORK -->
-<section id="work" class="section-win">
-    <h2>Selected Work</h2>
+<section id="work" class="py-5">
+    <h2 class="mb-4">Selected Work</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-    <div class="card-grid">
-
-        <!-- Project Olympus -->
-        <div class="pcard">
-            <div class="card-img-well">
-                <img src="Images/UnityIMG_PO.png">
-            </div>
-            <div class="card-body">
-                <h2>Project Olympus</h2>
-                <p>
-                    First full game project. Focused on learning Unity, C#, and 3D modeling fundamentals.
-                </p>
-                <div class="tags">
-                    <span class="tag">Unity</span>
-                    <span class="tag">C#</span>
-                    <span class="tag">Blender</span>
-                </div>
-                <a class="card-btn" href="https://kronosgamedev.itch.io/project-olympus" target="_blank">
-                    Play
-                </a>
-            </div>
-        </div>
-
-        <!-- Saddle Bums -->
-        <div class="pcard">
-            <div class="card-img-well">
-                <img src="Images/SaddleBumsLastStand1.png">
-            </div>
-            <div class="card-body">
-                <h2>Saddle Bum's Last Stand</h2>
-                <p>
-                    Game jam winning solo project. Endless western shooter with wave-based survival.
-                </p>
-                <div class="tags">
-                    <span class="tag">Solo</span>
-                    <span class="tag">Game Jam</span>
-                    <span class="tag">Unity</span>
-                </div>
-                <a class="card-btn" href="https://stevendrain.itch.io/saddle-bums-last-stand" target="_blank">
-                    Play
-                </a>
-            </div>
-        </div>
-
-        <!-- Gym-sperience -->
-        <div class="pcard">
-            <div class="card-vid-well">
-                <iframe src="https://www.youtube.com/embed/SrJB69D1M_k" allowfullscreen></iframe>
-            </div>
-            <div class="card-body">
-                <h2>Gym-sperience (VR)</h2>
-                <p>
-                    VR training experience. Led scripting, interaction design, and 360 video integration.
-                </p>
-                <div class="tags">
-                    <span class="tag">VR</span>
-                    <span class="tag">Unity</span>
-                    <span class="tag">Team</span>
+        <div class="col">
+            <div class="pcard h-100">
+                <div class="card-img-well"><img src="Images/UnityIMG_PO.png"></div>
+                <div class="card-body">
+                    <h2>Project Olympus</h2>
+                    <p>First full game project. Focused on learning Unity, C#, and 3D modeling fundamentals.</p>
+                    <div class="tags mt-auto">
+                        <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Blender</span>
+                    </div>
+                    <a class="card-btn mt-3" href="https://kronosgamedev.itch.io/project-olympus" target="_blank">Play</a>
                 </div>
             </div>
         </div>
 
-        <!-- Duplicate cards (cleanly inside grid) -->
-        <div class="pcard">
-            <div class="card-vid-well">
-                <iframe src="https://www.youtube.com/embed/_ayxS6ihr1E?si=O3o-_lHoTP36spBj" allowfullscreen></iframe>
-            </div>
-            <div class="card-body">
-                <h2>Arduino Tutorials(AR)</h2>
-                <p>
-                    AR training experince, teaches users how to use Arduino kits using AI and AR integration.
-                </p>
-                <div class="tags">
-                    <span class="tag">AR</span>
-                    <span class="tag">Swift</span>
-                    <span class="tag">Team</span>
+        <div class="col">
+            <div class="pcard h-100">
+                <div class="card-img-well"><img src="Images/SaddleBumsLastStand1.png"></div>
+                <div class="card-body">
+                    <h2>Saddle Bum's Last Stand</h2>
+                    <p>Game jam winning solo project. Endless western shooter with wave-based survival.</p>
+                    <div class="tags mt-auto">
+                        <span class="tag">Solo</span><span class="tag">Game Jam</span><span class="tag">Unity</span>
+                    </div>
+                    <a class="card-btn mt-3" href="https://stevendrain.itch.io/saddle-bums-last-stand" target="_blank">Play</a>
                 </div>
             </div>
         </div>
 
-        <div class="pcard">
-            <div class="card-vid-well">
-                <!--<iframe src="https://www.youtube.com/embed/SrJB69D1M_k" allowfullscreen></iframe>-->
-                <h1>Video Soon</h1>
-            </div>
-            <div class="card-body">
-                <h2>Forklift Warriors</h2>
-                <p>
-                    VR training experience. Lead programmer, teaches users the basics of a forklift in a controlled enviroment.
-                </p>
-                <div class="tags">
-                    <span class="tag">VR</span>
-                    <span class="tag">Unity</span>
-                    <span class="tag">Accessible</span>
-                    <span class="tag">Team</span>
+        <div class="col">
+            <div class="pcard h-100">
+                <div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/SrJB69D1M_k" allowfullscreen></iframe></div>
+                <div class="card-body">
+                    <h2>Gym-sperience (VR)</h2>
+                    <p>VR training experience. Led scripting, interaction design, and 360 video integration.</p>
+                    <div class="tags mt-auto">
+                        <span class="tag">VR</span><span class="tag">Unity</span><span class="tag">Team</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="pcard">
-            <div class="card-vid-well">
-                <iframe src="https://www.youtube.com/embed/iOxXk6_kGAU?si=7n8hs1ZWJ2kO_Znl" allowfullscreen></iframe>
-            </div>
-            <div class="card-body">
-                <h2>Individual Game</h2>
-                <p>
-                    A solo-developed stealth game with a focus on AI behavior.
-                </p>
-                <div class="tags">
-                    <span class="tag">Stealth</span>
-                    <span class="tag">Unity</span>
-                    <span class="tag">Solo</span>
+        <div class="col">
+            <div class="pcard h-100">
+                <div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/_ayxS6ihr1E?si=O3o-_lHoTP36spBj" allowfullscreen></iframe></div>
+                <div class="card-body">
+                    <h2>Arduino Tutorials (AR)</h2>
+                    <p>AR training experience, teaches users how to use Arduino kits using AI and AR integration.</p>
+                    <div class="tags mt-auto">
+                        <span class="tag">AR</span><span class="tag">Swift</span><span class="tag">Team</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-    </div> <!-- ONLY closing once -->
-
-</section>
-
-<!-- LEVEL DESIGN -->
-<section id="level" class="section-win">
-    <h2>Level Design</h2>
-
-    <div class="intro-box">
-        <p>
-            My main focus is in level design and gameplay systems. I enjoy creating spaces that encourage player expression through interactive elements, environmental storytelling, and pacing.
-        </p>
-    </div>
-    <!--Mineshaft, Molten, Forklift, The Ark1, The Ark2, Special Topic-->
-
-    <div class="card-grid">
-
-        <div class="pcard">
-            <div class="card-img-well">
-                <img src="Images/MineshaftLevelConcept.jpg">
-            </div>
-            <div class="card-body">
-                <h2>Mineshaft Co-op Level</h2>
-                <p>Designed around asymmetrical player abilities and coordination.</p>
-                <div class="tags">
-                    <span class="tag">Co-op</span>
-                    <span class="tag">Level Design</span>
+        <div class="col">
+            <div class="pcard h-100">
+                <div class="card-vid-well d-flex align-items-center justify-content-center bg-dark text-white" style="height:180px;">
+                    <h1>Video Soon</h1>
+                </div>
+                <div class="card-body">
+                    <h2>Forklift Warriors</h2>
+                    <p>VR training experience. Lead programmer, teaches users the basics of a forklift in a controlled environment.</p>
+                    <div class="tags mt-auto">
+                        <span class="tag">VR</span><span class="tag">Unity</span><span class="tag">Team</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="pcard">
-            <div class="card-img-well">
-                <img src="Images/MoltenLevelConcept.jpg">
-            </div>
-            <div class="card-body">
-                <h2>Molten Level</h2>
-                <p>Lava-based puzzle level emphasizing teamwork and timing.</p>
-                <div class="tags">
-                    <span class="tag">Puzzle</span>
-                    <span class="tag">Level Design</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="pcard">
-            <div class="card-img-well">
-                <img src="Images/Level1.png">
-            </div>
-            <div class="card-body">
-                <h2>The Ark Level 1</h2>
-                <p>Designed around avoiding enemy detection to get to the end of the level.</p>
-                <div class="tags">
-                    <span class="tag">Stealth</span>
-                    <span class="tag">Level Design</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="pcard">
-            <div class="card-img-well">
-                <img src="Images/Level2.jpg">
-            </div>
-            <div class="card-body">
-                <h2>The Ark Level 2</h2>
-                <p>One main suspenseful sequence.</p>
-                <div class="tags">
-                    <span class="tag">Stealth</span>
-                    <span class="tag">Suspense</span>
-                    <span class="tag">Level Design</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="pcard">
-            <div class="card-img-well">
-                <img src="Images/SpecialTopicExample.png">
-            </div>
-            <div class="card-body">
-                <h2>Special Topic Presentation</h2>
-                <p>A very simple level design project to teach my classmates about level design principles.</p>
-                <div class="tags">
-                    
-                    <span class="tag">Level Design</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="pcard">
-            <div class="card-img-well">
-                <img src="Images/ForkliftWarriorsFinal.jpg">
-            </div>
-            <div class="card-body">
-                <h2>Forklift Warriors Final Iteraion</h2>
-                <p>Warehouse level that is based off of real warehouse designs.</p>
-                <div class="tags">
-                    <span class="tag">Co-op</span>
-                    <span class="tag">Level Design</span>
+        <div class="col">
+            <div class="pcard h-100">
+                <div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/iOxXk6_kGAU?si=7n8hs1ZWJ2kO_Znl" allowfullscreen></iframe></div>
+                <div class="card-body">
+                    <h2>Individual Game</h2>
+                    <p>A solo-developed stealth game with a focus on AI behavior.</p>
+                    <div class="tags mt-auto">
+                        <span class="tag">Stealth</span><span class="tag">Unity</span><span class="tag">Solo</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -283,100 +150,151 @@
     </div>
 </section>
 
-<!-- 3D / ART -->
-<section id="art" class="section-win">
-    <h2>3D Models</h2>
+<section id="level" class="py-5">
+    <h2 class="mb-3">Level Design</h2>
+    <div class="intro-box mb-4">
+        <p>My main focus is in level design and gameplay systems. I enjoy creating spaces that encourage player expression through interactive elements, environmental storytelling, and pacing.</p>
+    </div>
 
-    <div class="card-grid">
-
-        <div class="pcard">
-            <div class="card-img-well">
-                <model-viewer src="Models/KnifeHand.glb" camera-controls loading="lazy"></model-viewer>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+            <div class="pcard h-100">
+                <div class="card-img-well"><img src="Images/MineshaftLevelConcept.jpg"></div>
+                <div class="card-body">
+                    <h2>Mineshaft Co-op Level</h2>
+                    <p>Designed around asymmetrical player abilities and coordination.</p>
+                    <div class="tags mt-auto"><span class="tag">Co-op</span><span class="tag">Level Design</span></div>
+                </div>
             </div>
-            <div class="card-body">
-                <h2>Knife Hand</h2>
-                <p>Player hand from The Arc</p>
-                <div class="tags">
-                    <span class="tag">The Arc</span>
-                    <span class="tag">Substance Painter</span>
-                    <span class="tag">Blender</span>
+        </div>
+        <div class="col">
+            <div class="pcard h-100">
+                <div class="card-img-well"><img src="Images/MoltenLevelConcept.jpg"></div>
+                <div class="card-body">
+                    <h2>Molten Level</h2>
+                    <p>Lava-based puzzle level emphasizing teamwork and timing.</p>
+                    <div class="tags mt-auto"><span class="tag">Puzzle</span><span class="tag">Level Design</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="pcard h-100">
+                <div class="card-img-well"><img src="Images/Level1.png"></div>
+                <div class="card-body">
+                    <h2>The Ark Level 1</h2>
+                    <p>Designed around avoiding enemy detection to get to the end of the level.</p>
+                    <div class="tags mt-auto"><span class="tag">Stealth</span><span class="tag">Level Design</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="pcard h-100">
+                <div class="card-img-well"><img src="Images/Level2.jpg"></div>
+                <div class="card-body">
+                    <h2>The Ark Level 2</h2>
+                    <p>One main suspenseful sequence.</p>
+                    <div class="tags mt-auto"><span class="tag">Stealth</span><span class="tag">Level Design</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="pcard h-100">
+                <div class="card-img-well"><img src="Images/SpecialTopicExample.png"></div>
+                <div class="card-body">
+                    <h2>Special Topic Presentation</h2>
+                    <p>A simple level design project to teach classmates about design principles.</p>
+                    <div class="tags mt-auto"><span class="tag">Level Design</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="pcard h-100">
+                <div class="card-img-well"><img src="Images/ForkliftWarriorsFinal.jpg"></div>
+                <div class="card-body">
+                    <h2>Forklift Warriors Final</h2>
+                    <p>Warehouse level based off of real warehouse designs.</p>
+                    <div class="tags mt-auto"><span class="tag">Co-op</span><span class="tag">Level Design</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="art" class="py-5">
+    <h2 class="mb-4">3D Models</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        
+        <div class="col">
+            <div class="pcard h-100">
+                <model-viewer src="Models/KnifeHand.glb" camera-controls loading="lazy" auto-rotate></model-viewer>
+                <div class="card-body">
+                    <h2>Knife Hand</h2>
+                    <p>Player hand from The Arc</p>
+                    <div class="tags"><span class="tag">The Arc</span><span class="tag">Substance Painter</span><span class="tag">Blender</span></div>
                 </div>
             </div>
         </div>
 
-        <div class="pcard">
-            <div class="model-well">
-                <model-viewer src="Models/Computer.glb" camera-controls loading="lazy"></model-viewer>
-            </div>
-            <div class="card-body">
-                <h2>Interactive 3D Model</h2>
-                <p>Computer for The Arc.</p>
-                <div class="tags">
-                    <span class="tag">The Arc</span>
-                    <span class="tag">Substance Painter</span>
-                    <span class="tag">Blender</span>
+        <div class="col">
+            <div class="pcard h-100">
+                <model-viewer src="Models/Computer.glb" camera-controls loading="lazy" auto-rotate></model-viewer>
+                <div class="card-body">
+                    <h2>Interactive Computer</h2>
+                    <p>Computer for The Arc.</p>
+                    <div class="tags"><span class="tag">The Arc</span><span class="tag">Substance Painter</span><span class="tag">Blender</span></div>
                 </div>
             </div>
         </div>
 
-        <div class="pcard">
-            <div class="model-well">
-                <model-viewer src="Models/Minecart.glb" camera-controls loading="lazy"></model-viewer>
-            </div>
-            <div class="card-body">
-                <h2>Minecart obstacle for couch co-op game</h2>
-                <div class="tags">
-                    <span class="tag">Couch Co-op</span>
-                    <span class="tag">Blender</span>
+        <div class="col">
+            <div class="pcard h-100">
+                <model-viewer src="Models/Minecart.glb" camera-controls loading="lazy" auto-rotate></model-viewer>
+                <div class="card-body">
+                    <h2>Minecart Obstacle</h2>
+                    <p>Obstacle for couch co-op game.</p>
+                    <div class="tags"><span class="tag">Couch Co-op</span><span class="tag">Blender</span></div>
                 </div>
             </div>
         </div>
 
-        <div class="pcard">
-            <div class="model-well">
-                <model-viewer src="Models/Railroad.glb" camera-controls loading="lazy"></model-viewer>
-            </div>
-            <div class="card-body">
-                <h2>Railroad Track for couch co-op game</h2>
-            </div>
-                <div class="tags">
-                    <span class="tag">Couch Co-op</span>
-                    <span class="tag">Blender</span>
-                </div>
-        </div>
-
-        <div class="pcard">
-            <div class="model-well">
-                <model-viewer src="Models/Enemy.glb" camera-controls loading="lazy"></model-viewer>
-            </div>
-            <div class="card-body">
-                <h2>Enemy model for The Arc</h2>
-                <div class="tags">
-                    <span class="tag">The Arc</span>
-                    <span class="tag">Substance Painter</span>
-                    <span class="tag">Blender</span>
+        <div class="col">
+            <div class="pcard h-100">
+                <model-viewer src="Models/Railroad.glb" camera-controls loading="lazy" auto-rotate></model-viewer>
+                <div class="card-body">
+                    <h2>Railroad Track</h2>
+                    <p>Track for couch co-op game.</p>
+                    <div class="tags"><span class="tag">Couch Co-op</span><span class="tag">Blender</span></div>
                 </div>
             </div>
         </div>
 
-        <div class="pcard">
-            <div class="model-well">
-                <model-viewer src="Models/Plant.glb" camera-controls loading="lazy"></model-viewer>
+        <div class="col">
+            <div class="pcard h-100">
+                <model-viewer src="Models/Enemy.glb" camera-controls loading="lazy" auto-rotate></model-viewer>
+                <div class="card-body">
+                    <h2>Enemy Model</h2>
+                    <p>Model for The Arc.</p>
+                    <div class="tags"><span class="tag">The Arc</span><span class="tag">Substance Painter</span><span class="tag">Blender</span></div>
+                </div>
             </div>
-            <div class="card-body">
-                <h2>Plant for The Arc</h2>
-                <div class="tags">
-                    <span class="tag">The Arc</span>
-                    <span class="tag">Blender</span>
+        </div>
+
+        <div class="col">
+            <div class="pcard h-100">
+                <model-viewer src="Models/Plant.glb" camera-controls loading="lazy" auto-rotate></model-viewer>
+                <div class="card-body">
+                    <h2>Plant Asset</h2>
+                    <p>Flora for The Arc.</p>
+                    <div class="tags"><span class="tag">The Arc</span><span class="tag">Blender</span></div>
                 </div>
             </div>
         </div>
 
     </div>
 </section>
-
 
 </main>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

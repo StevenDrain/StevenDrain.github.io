@@ -1,362 +1,206 @@
 /* =============================================
-   DESIGN SYSTEM
+   DESIGN SYSTEM & VARIABLES
 ============================================= */
 :root {
-    /* =============================================
-       BACKGROUNDS (dark → light hierarchy)
-    ============================================= */
-    --bg-main: #590d22ff;        /* page background */
-    --bg-surface: #800f2fff;     /* cards */
-    --bg-elev: #a4133cff;        /* hover / elevated surfaces */
-
-    /* Gradient background */
-    --bg-gradient-start: #590d22ff;
-    --bg-gradient-end: #800f2fff;
-
-    /* =============================================
-       ACCENTS (interaction colors)
-    ============================================= */
-    --accent: #ff4d6dff;         /* primary accent */
-    --accent-hover: #ff758fff;   /* hover state */
-    --accent-soft: #ff8fa3ff;    /* tags / subtle UI */
-
-    /* =============================================
-       TEXT
-    ============================================= */
-    --text-main: #fff0f3ff;      /* primary text */
-    --text-dim: #ffb3c1ff;       /* secondary text */
-
-    /* =============================================
-       UI ELEMENTS
-    ============================================= */
-    --border-subtle: #ffccd5ff;
-
-    /* Navbar */
-    --nav-bg: rgba(89, 13, 34, 0.85);
-
-    /* Shadows */
-    --card-shadow: rgba(0, 0, 0, 0.35);
-    --accent-shadow: rgba(255, 77, 109, 0.25);
-
-    /* Scrollbar */
-    --scroll-thumb: #a4133cff;
-
-    /* Selection */
-    --selection-bg: #ff4d6dff;
-    --selection-text: #000000;
-
-    /* Buttons */
+    --bg-main: #590d22;
+    --bg-surface: #800f2f;
+    --bg-elev: #a4133c;
+    --accent: #ff4d6d;
+    --accent-hover: #ff758f;
+    --accent-soft: #ff8fa3;
+    --text-main: #fff0f3;
+    --text-dim: #ffb3c1;
+    --border-subtle: rgba(255, 204, 213, 0.15);
+    --nav-bg: rgba(89, 13, 34, 0.95);
     --button-text: #000000;
 }
 
-/*--night-bordeaux: #590d22ff;
---dark-amaranth: #800f2fff;
---cherry-rose: #a4133cff;
---rosewood: #c9184aff;
---bubblegum-pink: #ff4d6dff;
---bubblegum-pink-2: #ff758fff;
---cotton-candy: #ff8fa3ff;
---cherry-blossom: #ffb3c1ff;
---pastel-pink: #ffccd5ff;
---lavender-blush: #fff0f3ff; */
-
 /* =============================================
-   RESET
-============================================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* =============================================
-   BASE
+   BASE STYLES
 ============================================= */
 body {
-    background: linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-surface) 100%);
+    background-attachment: fixed;
     color: var(--text-main);
-    font-family: 'Inter', system-ui, sans-serif;
-    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
+
+.text-dim { color: var(--text-dim); }
+.max-w-700 { max-width: 700px; }
 
 /* =============================================
    NAVBAR
 ============================================= */
 .menubar {
-    position: sticky;
-    top: 0;
-    z-index: 100;
     background: var(--nav-bg);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-subtle);
-    padding: 12px 24px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0.75rem 0;
 }
 
-.menubar-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.brand-logo {
-    max-height: 40px;
-    display: block;
-    position: relative;
-    top: 1px;
-}
-
-.menubar-links {
-    display: flex;
-    gap: 18px;
-}
+.brand-logo { max-height: 38px; }
 
 .menu-btn {
-    color: var(--text-dim);
-    font-size: 14px;
-    text-decoration: none;
-    transition: color 0.2s ease;
+    color: var(--text-dim) !important;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    padding: 0.5rem 1rem !important;
 }
 
 .menu-btn:hover {
-    color: var(--accent);
+    color: var(--accent) !important;
+}
+
+.contact-btn {
+    background: var(--accent);
+    color: var(--button-text) !important;
+    padding: 0.6rem 1.25rem !important;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.contact-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
+}
+
+/* Custom Hamburger Icon Color */
+.custom-toggler { border-color: var(--accent-soft); }
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 143, 163, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 /* =============================================
-   LAYOUT
-============================================= */
-.desktop {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
-
-/* =============================================
-   ABOUT SECTION
-============================================= */
-.about-grid {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    gap: 24px;
-    align-items: center;
-}
-
-@media (max-width: 700px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.photo-frame img {
-    width: 100%;
-    border-radius: 12px;
-}
-
-.text-pane {
-    color: var(--text-main);
-}
-
-.text-pane p {
-    font-size: 16px;
-    color: var(--text-dim);
-}
-
-/* =============================================
-   SECTIONS
-============================================= */
-.section-win {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.section-body {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* =============================================
-   CARD GRID
-============================================= */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 20px;
-}
-
-/* =============================================
-   PROJECT CARD
+   PROJECT CARDS
 ============================================= */
 .pcard {
     background: var(--bg-surface);
-    border-radius: 14px;
-    overflow: hidden;
     border: 1px solid var(--border-subtle);
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border 0.25s ease;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .pcard:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px var(--card-shadow);
-    border-color: var(--accent-shadow);
-}
-
-/* =============================================
-   IMAGE / VIDEO
-============================================= */
-.card-img-well,
-.card-vid-well {
-    overflow: hidden;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border-color: var(--accent);
 }
 
 .card-img-well img {
     width: 100%;
-    height: 180px;
+    height: 220px;
     object-fit: cover;
-    transition: transform 0.4s ease;
+    transition: transform 0.5s ease;
 }
 
-.pcard:hover img {
+.pcard:hover .card-img-well img {
     transform: scale(1.05);
 }
 
-.card-vid-well iframe {
-    width: 100%;
-    height: 180px;
-    border: none;
-}
-
-/* =============================================
-   CARD BODY
-============================================= */
 .card-body {
-    padding: 16px;
+    padding: 1.5rem;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
-.card-body h2 {
-    font-size: 16px;
-    font-weight: 600;
+.card-body h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
 }
 
 .card-body p {
-    font-size: 14px;
+    font-size: 0.95rem;
     color: var(--text-dim);
+    line-height: 1.5;
 }
 
 /* =============================================
-   TAGS
+   TAGS & BUTTONS
 ============================================= */
 .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 8px;
+    margin-top: 1rem;
 }
 
 .tag {
-    font-size: 12px;
-    padding: 4px 10px;
-    border-radius: 999px;
-    background: var(--accent-soft);
-    color: var(--accent);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 12px;
+    background: rgba(255, 77, 109, 0.1);
+    color: var(--accent-soft);
+    border: 1px solid rgba(255, 77, 109, 0.3);
+    border-radius: 50px;
 }
 
-/* =============================================
-   BUTTONS
-============================================= */
 .card-btn {
-    display: inline-block;
-    margin-top: 8px;
-
-    padding: 8px 14px;
-    border-radius: 8px;
-
     background: var(--accent);
     color: var(--button-text);
-    font-weight: 600;
     text-decoration: none;
-
-    transition:
-        transform 0.15s ease,
-        box-shadow 0.15s ease;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: 0.2s;
 }
 
 .card-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px var(--accent-shadow);
+    background: var(--text-main);
+    color: var(--bg-main);
 }
 
 /* =============================================
-   INTRO BOX
+   3D MODEL VIEWER
 ============================================= */
-.intro-box {
-    max-width: 700px;
+.model-well {
+    background: rgba(0,0,0,0.2);
+    border-bottom: 1px solid var(--border-subtle);
 }
 
-.intro-box p {
-    font-size: 15px;
-    color: var(--text-dim);
-}
-
-/* =============================================
-   MODEL VIEWER
-============================================= */
 model-viewer {
     width: 100%;
-    height: 380px;
-    border-radius: 12px;
-    overflow: hidden;
+    height: 350px;
+    --progress-bar-color: var(--accent);
 }
 
 /* =============================================
-   FOOTER / TASKBAR (SIMPLIFIED)
+   RESPONSIVE OVERRIDES
 ============================================= */
-.taskbar {
-    margin-top: 40px;
-    padding: 20px;
-    text-align: center;
-    color: var(--text-dim);
-    font-size: 14px;
-}
-
-/* =============================================
-   SCROLLBAR
-============================================= */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--scroll-thumb);
-    border-radius: 10px;
-}
-
-/* =============================================
-   SELECTION
-============================================= */
-::selection {
-    background: var(--selection-bg);
-    color: var(--selection-text);
-}
-
-/* =============================================
-   RESPONSIVE
-============================================= */
-@media (max-width: 640px) {
-    .card-grid {
-        grid-template-columns: 1fr;
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: var(--bg-main);
+        padding: 1.5rem;
+        border-radius: 15px;
+        margin-top: 10px;
+        border: 1px solid var(--border-subtle);
     }
 }
+
+@media (max-width: 576px) {
+    .display-4 { font-size: 2.2rem; }
+    model-viewer { height: 280px; }
+}
+
+.navbar-brand, 
+.navbar-brand b { 
+    color: var(--text-main) !important; 
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: var(--bg-elev); border-radius: 10px; }
